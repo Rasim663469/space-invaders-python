@@ -1,69 +1,91 @@
 div {
-    border: 2px solid rgb(235, 233, 233);
+    border: 2px solid rgba(235, 233, 233, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 body {
-    display: flex; /* Utilise Flexbox pour centrer les éléments */
-    flex-direction: column; /* Aligne les éléments verticalement */
-    justify-content: center; /* Centre verticalement */
-    align-items: center; /* Centre horizontalement */
-    height: 100vh; /* Hauteur de la fenêtre pour centrer verticalement */
-    margin: 0; /* Supprime les marges par défaut */
-    background-image: url("/home/rasim.erben/Téléchargements/espace");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("espace");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
 }
+
 header h1 {
     text-align: center;
-    font-size: 2em; /* Taille du texte */
-    margin-bottom: 20px; /* Espacement en bas pour séparer du contenu */
-    color: rgb(233, 223, 223); /* Couleur du texte */
-    font-family: 'Arial', sans-serif; /* Police moderne */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .square_grid {
-    display: grid; 
-    grid-template-columns: repeat(10, 1fr); 
-    gap: 2px; 
-    border: 2px solid rgb(0, 0, 0); 
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
     position: relative;
-    width: fit-content; 
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-.tile {
-    width: 30px; 
-    aspect-ratio: 1 / 1; 
-    border: 1px solid rgba(0, 0, 0, 0.2); 
-    background-color: white; 
+tile {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.tile:hover {
-    border-color: black; 
+tile:hover {
+    border-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(200, 200, 255, 0.4);
 }
-
-
 
 .player {
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-image: url("fusée.webp");
     position: absolute;
     bottom: 0;
-   
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .bullet {
     width: 10px;
     height: 10px;
-    background-color:aqua;
-    position:absolute;
+    background-image: url("balle.webp");
+    position: absolute;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 255, 255, 0.5);
 }
 
-.enemy{
-    width: 20px;
-    height: 30px;
-    background-color: rgb(177, 18, 18);
-    position:absolute;
+.enemy {
+    width: 60px;
+    height: 60px;
+    background-image: url("allien.webp");
+    position: absolute;
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 div span {
-    color:aliceblue;
+    color: #e0ffff;
+    font-weight: bold;
+    font-style: italic;
 }
