@@ -2,18 +2,29 @@ div {
     border: 2px solid black;
 }
 
+body {
+    display: flex; /* Utilise Flexbox pour centrer les éléments */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    height: 100vh; /* Hauteur de la fenêtre pour centrer verticalement */
+    margin: 0; /* Supprime les marges par défaut */
+    background-color: #8b8787; /* Arrière-plan gris */
+}
 
 header h1 {
     text-align: center;
-    font-size: 2em; /
-    margin-top: 20px; 
+    font-size: 2em; /* Taille du texte */
+    margin-bottom: 20px; /* Espacement en bas pour séparer du contenu */
+    color: black; /* Couleur du texte */
+    font-family: 'Arial', sans-serif; /* Police moderne */
 }
 
 .square_grid {
     display: grid; 
     grid-template-columns: repeat(10, 1fr); 
     gap: 2px; 
-    border: 2px solid black; 
+    border: 2px solid rgb(0, 0, 0); 
     width: fit-content; 
 }
 
@@ -26,4 +37,22 @@ header h1 {
 
 .tile:hover {
     border-color: black; 
+}
+
+#game-container {
+    width: 800px;
+    height: 600px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 150px;
+    left: 450px; /* Centré initialement */
 }
