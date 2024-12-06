@@ -1,5 +1,5 @@
 div {
-    border: 2px solid black;
+    border: 2px solid rgb(235, 233, 233);
 }
 
 body {
@@ -9,14 +9,13 @@ body {
     align-items: center; /* Centre horizontalement */
     height: 100vh; /* Hauteur de la fenêtre pour centrer verticalement */
     margin: 0; /* Supprime les marges par défaut */
-    background-color: #8b8787; /* Arrière-plan gris */
+    background-image: url("/home/rasim.erben/Téléchargements/espace");
 }
-
 header h1 {
     text-align: center;
     font-size: 2em; /* Taille du texte */
     margin-bottom: 20px; /* Espacement en bas pour séparer du contenu */
-    color: black; /* Couleur du texte */
+    color: rgb(233, 223, 223); /* Couleur du texte */
     font-family: 'Arial', sans-serif; /* Police moderne */
 }
 
@@ -25,6 +24,7 @@ header h1 {
     grid-template-columns: repeat(10, 1fr); 
     gap: 2px; 
     border: 2px solid rgb(0, 0, 0); 
+    position: relative;
     width: fit-content; 
 }
 
@@ -39,20 +39,31 @@ header h1 {
     border-color: black; 
 }
 
-#game-container {
-    width: 800px;
-    height: 600px;
-    border: 2px solid black;
-    position: relative;
-    overflow: hidden;
-    background-color: black;
-}
 
-#player {
+
+.player {
     width: 50px;
     height: 50px;
     background-color: red;
     position: absolute;
-    bottom: 150px;
-    left: 450px; /* Centré initialement */
+    bottom: 0;
+   
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    background-color:aqua;
+    position:absolute;
+}
+
+.enemy{
+    width: 20px;
+    height: 30px;
+    background-color: rgb(177, 18, 18);
+    position:absolute;
+}
+
+div span {
+    color:aliceblue;
 }
