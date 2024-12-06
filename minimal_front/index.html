@@ -2,12 +2,38 @@
 <html lang="en">
     <head> 
         <meta charset="UTF-8"> 
-        <title> Minimal page </title> 
-        <link rel="stylesheet" href="style.css"> 
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avion de Chasse</title> 
+        
+        <link rel="stylesheet" href="style.css">
     </head> 
     <body> 
-        <div>Some div</div>
+        <header>
+            <h1>Avion de Chasse</h1>
+            <p>Utilisez les flèches pour bouger et la barre d'espace pour tirer.</p>
+        </header>
+
+        <div class="row_container">
+           
+            <div id="my_grid" class="square_grid"></div>
+
+            
+            <div>
+                <div class="row_container">
+                    <span>Score :</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="row_container">
+                    <input id="start-btn" type="button" value="Commencer" onclick="startGame();">
+                    <input id="restart-btn" type="button" value="Recommencer" onclick="restartGame();">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Créé par Erben Rasim, Aber Fatouma et Ferhaoui Amira</p>
+        </footer>
+
         <script src="script.js"></script>
     </body> 
-</html> 
+</html>
